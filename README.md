@@ -43,7 +43,11 @@ cd ./lib
 4. Run the `word_maker.rb`.
 
 ```sh
+<<<<<<< HEAD
 ruby word_maker.rb
+=======
+ruby word_maker.rb`
+>>>>>>> b2e8ec4e88561940dae76378b4fcbcc97c60500f
 ```
 5. Copy the hash.
 
