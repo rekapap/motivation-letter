@@ -43,7 +43,7 @@ cd ./lib
 4. Run the `word_maker.rb`.
 
 ```sh
-ruby mapper.rb
+ruby word_maker.rb
 ```
 5. Copy the hash.
 
