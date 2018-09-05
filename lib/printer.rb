@@ -1,6 +1,5 @@
 # Printer
 class Printer
-  
   def lines(ch1, ch2, mp)
     str = ''
     ch1, ch2 = ch2, ch1 if mp[0] == 1
@@ -18,5 +17,4 @@ class Printer
     end
     puts ''
   end
-
 end

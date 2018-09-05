@@ -1,5 +1,6 @@
 require './lib/encrypt'
 
+# Creates the message from ciphered text hash
 class MessageMaker
   include Encrypt
 
@@ -40,7 +41,6 @@ class MessageMaker
       end
     end
   end
-  
 end
 
 if __FILE__ == $PROGRAM_NAME

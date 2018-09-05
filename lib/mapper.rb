@@ -2,20 +2,21 @@ class Mapper
   def line_dec(ch1, ch2, str)
     line = []
     arr = str.split(//).to_a
-    arr[0] == ch1 ? line[0] = 0 : line[0] = 1 # line= [0]
+    line[0] = arr[0] == ch1 ? 0 : 1 # line= [0]
     line[1] = [] # line = [0, []]
     n = 0
     col = ch1
     arr.each do |x|
       if x == col
-        n +=1
+        n += 1
       else
-        line[1].push(n) unless n == 0
-        col == ch1 ? col = ch2 : col = ch1
+        line[1].push(n) unless n.zero?
+        col = col == ch1 ? ch2 : ch1
         n = 1
       end
     end
-    line[1].push(n) unless n == 0 #last color
+    # last color
+    line[1].push(n) unless n.zero?
     line
   end
 
@@ -26,7 +27,7 @@ class Mapper
       ch1 = colors[0]
       ch2 = colors[1]
     else
-      return "Error: not two colors!"
+      return 'Error: not two colors!'
     end
     temp = str.split("\n")
     temp.map{ |l| line_dec(ch1, ch2,l)}
